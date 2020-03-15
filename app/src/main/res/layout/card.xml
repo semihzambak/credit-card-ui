@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/credit_card"
+    android:layout_width="300dp"
+    android:layout_height="175dp"
+    android:layout_below="@+id/custum_actionbar"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/credit_card"
+    android:elevation="30dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/brand"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/master_card" />
+
+        <TextView
+            android:id="@+id/card_number_text"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="70dp"
+            android:fontFamily="@font/ocrasd"
+            android:gravity="center"
+            android:hint="1234 1234 1234 1234"
+            android:padding="2dp"
+            android:textColor="@color/darkContentTextPrimary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/card_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ocrasd"
+            android:hint="Ad Soyad"
+            android:padding="2dp"
+            android:textAllCaps="true"
+            android:textColor="@color/darkContentTextPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/card_mm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="30dp"
+            android:layout_toLeftOf="@id/card_mmyy_space"
+            android:fontFamily="@font/ocrasd"
+            android:hint="AA"
+            android:padding="2dp"
+            android:textColor="@color/darkContentTextPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/card_mmyy_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="30dp"
+            android:layout_toLeftOf="@id/card_yy_text"
+            android:fontFamily="@font/ocrasd"
+            android:hint="/"
+            android:padding="2dp"
+            android:textColor="@color/darkContentTextPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/card_yy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="28dp"
+            android:textColor="@color/darkContentTextPrimary"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ocrasd"
+            android:hint="YY"
+            android:padding="2dp"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <View
+            android:id="@+id/black_line"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="#000" />
+
+
+        <LinearLayout
+            android:id="@+id/lines"
+            android:layout_width="150dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/black_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#808080" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#a1a1a1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#808080" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#a1a1a1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#808080" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#a1a1a1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cvv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/black_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="23dp"
+            android:layout_toEndOf="@id/lines"
+            android:fontFamily="@font/ocrasd"
+            android:hint="XXX"
+            android:textColor="@color/darkContentTextPrimary"
+            android:maxLength="3"
+            android:padding="2dp"
+            android:textAllCaps="true"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/brand2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/master_card" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+   <include layout="@layout/card" />
+
+   <EditText
+       android:id="@+id/card_number_edit"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:layout_below="@+id/card_name_edit"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="8dp"
+       android:layout_marginEnd="16dp"
+       android:hint="Kart Numarası"
+       android:inputType="number"
+       android:maxLength="16"
+       android:padding="5dp"/>
+
+
+   <EditText
+       android:id="@+id/card_user_edit"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:layout_below="@+id/card_number_edit"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="8dp"
+       android:layout_marginEnd="16dp"
+       android:hint="Kart Sahibinin Adı"
+       android:inputType="textPersonName"
+       android:padding="5dp" />
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+      <EditText
+          android:id="@+id/card_mm_edit"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@+id/card_user_edit"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="16dp"
+          android:layout_weight="2"
+          android:hint="Ay"
+          android:inputType="number"
+          android:maxLength="2"
+          android:padding="5dp" />
+
+      <EditText
+          android:id="@+id/card_yy_edit"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@+id/card_user_edit"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="16dp"
+          android:layout_weight="2"
+          android:hint="Yıl"
+          android:inputType="number"
+          android:maxLength="2"
+          android:padding="5dp"/>
+   </LinearLayout>
+
+   <EditText
+       android:id="@+id/card_cvv_edit"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:layout_below="@+id/card_mmyy_edit"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="8dp"
+       android:layout_marginEnd="16dp"
+       android:hint="CVV"
+       android:inputType="number"
+       android:maxLength="3"
+       android:padding="5dp"/>
+
+</LinearLayout>
