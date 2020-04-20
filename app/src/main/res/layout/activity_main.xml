@@ -10,10 +10,10 @@
    <include layout="@layout/card" />
 
    <EditText
-       android:id="@+id/card_number_edit"
+       android:id="@+id/card_number"
        android:layout_width="match_parent"
        android:layout_height="60dp"
-       android:layout_below="@+id/card_name_edit"
+       android:layout_below="@+id/cardholder_name"
        android:layout_marginStart="16dp"
        android:layout_marginTop="8dp"
        android:layout_marginEnd="16dp"
@@ -24,10 +24,10 @@
 
 
    <EditText
-       android:id="@+id/card_user_edit"
+       android:id="@+id/cardholder_name"
        android:layout_width="match_parent"
        android:layout_height="60dp"
-       android:layout_below="@+id/card_number_edit"
+       android:layout_below="@+id/card_number"
        android:layout_marginStart="16dp"
        android:layout_marginTop="8dp"
        android:layout_marginEnd="16dp"
@@ -41,10 +41,10 @@
        android:layout_height="wrap_content">
 
       <EditText
-          android:id="@+id/card_mm_edit"
+          android:id="@+id/expire_month"
           android:layout_width="match_parent"
           android:layout_height="60dp"
-          android:layout_below="@+id/card_user_edit"
+          android:layout_below="@+id/cardholder_name"
           android:layout_marginStart="16dp"
           android:layout_marginTop="8dp"
           android:layout_marginEnd="16dp"
@@ -55,10 +55,10 @@
           android:padding="5dp" />
 
       <EditText
-          android:id="@+id/card_yy_edit"
+          android:id="@+id/expire_year"
           android:layout_width="match_parent"
           android:layout_height="60dp"
-          android:layout_below="@+id/card_user_edit"
+          android:layout_below="@+id/cardholder_name"
           android:layout_marginStart="16dp"
           android:layout_marginTop="8dp"
           android:layout_marginEnd="16dp"
@@ -70,7 +70,7 @@
    </LinearLayout>
 
    <EditText
-       android:id="@+id/card_cvv_edit"
+       android:id="@+id/card_code"
        android:layout_width="match_parent"
        android:layout_height="60dp"
        android:layout_below="@+id/card_mmyy_edit"

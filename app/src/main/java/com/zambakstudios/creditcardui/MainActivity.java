@@ -21,8 +21,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView cardNumberText, cardUserText, cardMMText, cardYYText, cardCvvText;
-    private EditText cardNumber, cardUser, cardMM, cardYY, cardCvv;
+    private TextView cardNumberText, cardholderText, expireMonthText, expireYearText, cardCodeText;
+    private EditText cardNumber, cardholder, expireMonth, expireYear, cardCode;
 
     private RelativeLayout card, front, back;
     private boolean isFront;
@@ -32,16 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         cardNumberText = findViewById(R.id.card_number_text);
-        cardUserText = findViewById(R.id.card_user_text);
-        cardMMText = findViewById(R.id.card_mm_text);
-        cardYYText = findViewById(R.id.card_yy_text);
-        cardCvvText = findViewById(R.id.cvv_text);
+        cardholderText = findViewById(R.id.cardholder_name_text);
+        expireMonthText = findViewById(R.id.expire_month_text);
+        expireYearText = findViewById(R.id.expire_year_text);
+        cardCodeText = findViewById(R.id.card_code_text);
 
-        cardNumber = findViewById(R.id.card_number_edit);
-        cardUser = findViewById(R.id.card_user_edit);
-        cardMM = findViewById(R.id.card_mm_edit);
-        cardYY = findViewById(R.id.card_yy_edit);
-        cardCvv = findViewById(R.id.card_cvv_edit);
+        cardNumber = findViewById(R.id.card_number);
+        cardholder = findViewById(R.id.cardholder_name);
+        expireMonth = findViewById(R.id.expire_month);
+        expireYear = findViewById(R.id.expire_year);
+        cardCode = findViewById(R.id.card_code);
 
         card = findViewById(R.id.credit_card);
         front = findViewById(R.id.front);
@@ -77,14 +77,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        cardUser.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        cardholder.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                focusChange(hasFocus, cardUserText, false);
+                focusChange(hasFocus, cardholderText, false);
             }
         });
 
-        cardUser.addTextChangedListener(new TextWatcher() {
+        cardholder.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -96,20 +96,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.length() > 15)
-                    cardUserText.setText(s.toString().substring(0, 15) + "...");
+                    cardholderText.setText(s.toString().substring(0, 15) + "...");
                 else
-                    cardUserText.setText(s.toString());
+                    cardholderText.setText(s.toString());
             }
         });
 
-        cardMM.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        expireMonth.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                focusChange(hasFocus, cardMMText, false);
+                focusChange(hasFocus, expireMonthText, false);
             }
         });
 
-        cardMM.addTextChangedListener(new TextWatcher() {
+        expireMonth.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -131,18 +131,18 @@ public class MainActivity extends AppCompatActivity {
                             month = "0" + (monthTemp / 10);
                         }
                     }
-                    cardMMText.setText(month);
+                    expireMonthText.setText(month);
                 }
             }
         });
 
-        cardYY.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        expireYear.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                focusChange(hasFocus, cardYYText, false);
+                focusChange(hasFocus, expireYearText, false);
             }
         });
-        cardYY.addTextChangedListener(new TextWatcher() {
+        expireYear.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -163,19 +163,19 @@ public class MainActivity extends AppCompatActivity {
                             year = "20";
                         }
                     }
-                    cardYYText.setText(year);
+                    expireYearText.setText(year);
                 }
             }
         });
 
-        cardCvv.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        cardCode.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                focusChange(hasFocus, cardCvvText, true);
+                focusChange(hasFocus, cardCodeText, true);
             }
         });
 
-        cardCvv.addTextChangedListener(new TextWatcher() {
+        cardCode.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                cardCvvText.setText(s.toString());
+                cardCodeText.setText(s.toString());
             }
         });
 

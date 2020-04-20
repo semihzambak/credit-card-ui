@@ -41,7 +41,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/card_user_text"
+            android:id="@+id/cardholder_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -55,7 +55,7 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/card_mm_text"
+            android:id="@+id/expire_month_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -75,7 +75,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="1dp"
             android:layout_marginBottom="30dp"
-            android:layout_toLeftOf="@id/card_yy_text"
+            android:layout_toLeftOf="@id/expire_year_text"
             android:fontFamily="@font/ocrasd"
             android:hint="/"
             android:padding="2dp"
@@ -83,7 +83,7 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/card_yy_text"
+            android:id="@+id/expire_year_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -154,7 +154,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/cvv_text"
+            android:id="@+id/card_code_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/black_line"
